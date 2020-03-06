@@ -108,11 +108,11 @@ def delete_target(session, name, check_mode):
 
 def run_module():
     module_args = dict(
-        koji=dict(type='str', required=False),
-        name=dict(type='str', required=True),
-        state=dict(type='str', required=False, default='present'),
-        build_tag=dict(type='str', required=True),
-        dest_tag=dict(type='str', required=True),
+        koji=dict(required=False),
+        name=dict(required=True),
+        state=dict(required=False, default='present'),
+        build_tag=dict(required=True),
+        dest_tag=dict(required=True),
     )
     module = AnsibleModule(
         argument_spec=module_args,
