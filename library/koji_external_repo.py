@@ -109,8 +109,8 @@ def run_module():
     module_args = dict(
         koji=dict(required=False),
         name=dict(required=True),
-        state=dict(required=False, default='present'),
-        url=dict(required=False, default=None),
+        state=dict(default='present'),
+        url=dict(default=None),
     )
     module = AnsibleModule(
         argument_spec=module_args,

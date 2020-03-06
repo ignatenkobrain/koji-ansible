@@ -119,8 +119,8 @@ def run_module():
         koji=dict(required=False),
         name=dict(required=True),
         permissions=dict(type='list', required=True),
-        krb_principal=dict(required=False, default=None),
-        state=dict(required=False, default='enabled'),
+        krb_principal=dict(default=None),
+        state=dict(default='enabled'),
     )
     module = AnsibleModule(
         argument_spec=module_args,

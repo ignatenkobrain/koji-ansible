@@ -71,7 +71,7 @@ def run_module():
         name=dict(required=True),
         description=dict(required=True),
         extensions=dict(required=True),
-        state=dict(required=False, default='present'),
+        state=dict(default='present'),
     )
     module = AnsibleModule(
         argument_spec=module_args,

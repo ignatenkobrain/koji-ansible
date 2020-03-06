@@ -110,7 +110,7 @@ def run_module():
     module_args = dict(
         koji=dict(required=False),
         name=dict(required=True),
-        state=dict(required=False, default='present'),
+        state=dict(default='present'),
         build_tag=dict(required=True),
         dest_tag=dict(required=True),
     )

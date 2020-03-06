@@ -140,7 +140,7 @@ def run_module():
         koji=dict(required=False),
         name=dict(required=True),
         user=dict(required=True),
-        state=dict(required=False, default='present'),
+        state=dict(default='present'),
     )
     module = AnsibleModule(
         argument_spec=module_args,

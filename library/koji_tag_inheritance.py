@@ -278,11 +278,11 @@ def run_module():
         child_tag=dict(required=True),
         parent_tag=dict(required=True),
         priority=dict(type='int', required=False),
-        maxdepth=dict(type='int', required=False, default=None),
-        pkg_filter=dict(required=False, default=''),
-        intransitive=dict(type='bool', required=False, default=False),
-        noconfig=dict(type='bool', required=False, default=False),
-        state=dict(required=False, default='present'),
+        maxdepth=dict(type='int', default=None),
+        pkg_filter=dict(default=''),
+        intransitive=dict(type='bool', default=False),
+        noconfig=dict(type='bool', default=False),
+        state=dict(default='present'),
     )
     module = AnsibleModule(
         argument_spec=module_args,
