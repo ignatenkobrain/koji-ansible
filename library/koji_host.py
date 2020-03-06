@@ -192,11 +192,11 @@ def run_module():
         koji=dict(required=False),
         name=dict(required=True),
         arches=dict(type='list', required=True),
-        channels=dict(type='list', required=False, default=None),
-        krb_principal=dict(required=False, default=None),
-        capacity=dict(type='float', required=False, default=None),
-        description=dict(required=False, default=None),
-        comment=dict(required=False, default=None),
+        channels=dict(type='list', required=False),
+        krb_principal=dict(required=False),
+        capacity=dict(type='float', required=False),
+        description=dict(required=False),
+        comment=dict(required=False),
         state=dict(default='enabled'),
     )
     module = AnsibleModule(
